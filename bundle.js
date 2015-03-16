@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"C:\\ksana2015\\myapp\\index.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"D:\\ksana2015\\myapp\\index.js":[function(require,module,exports){
 var React=require("react");
 var runtime=require("ksana2015-webruntime");
 runtime.boot("myapp",function(){
@@ -6,12 +6,12 @@ runtime.boot("myapp",function(){
 	var Main=React.createElement(require("./src/main.jsx"));
 	ksana.mainComponent=React.render(Main,document.getElementById("main"));
 });
-},{"./src/main.jsx":"C:\\ksana2015\\myapp\\src\\main.jsx","ksana2015-webruntime":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\index.js","react":"react"}],"C:\\ksana2015\\myapp\\src\\main.jsx":[function(require,module,exports){
+},{"./src/main.jsx":"D:\\ksana2015\\myapp\\src\\main.jsx","ksana2015-webruntime":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\index.js","react":"react"}],"D:\\ksana2015\\myapp\\src\\main.jsx":[function(require,module,exports){
 var React=require("react");
 var kse=require("ksana-search");
 var maincomponent = React.createClass({displayName: "maincomponent",
   getInitialState:function() {
-    return {result:[],tofind:"君子"};
+    return {result:[],tofind:"資生"};
   },
   search:function() {
     kse.search("sample",this.state.tofind,{range:{start:0}},function(err,data){
@@ -33,7 +33,7 @@ var maincomponent = React.createClass({displayName: "maincomponent",
   }
 });
 module.exports=maincomponent;
-},{"ksana-search":"C:\\ksana2015\\node_modules\\ksana-search\\index.js","react":"react"}],"C:\\ksana2015\\node_modules\\ksana-analyzer\\configs.js":[function(require,module,exports){
+},{"ksana-search":"D:\\ksana2015\\node_modules\\ksana-search\\index.js","react":"react"}],"D:\\ksana2015\\node_modules\\ksana-analyzer\\configs.js":[function(require,module,exports){
 var tokenizers=require('./tokenizers');
 var normalizeTbl=null;
 var setNormalizeTable=function(tbl,obj) {
@@ -90,7 +90,7 @@ var tibetan1={
 	}
 }
 module.exports={"simple1":simple1,"tibetan1":tibetan1}
-},{"./tokenizers":"C:\\ksana2015\\node_modules\\ksana-analyzer\\tokenizers.js"}],"C:\\ksana2015\\node_modules\\ksana-analyzer\\index.js":[function(require,module,exports){
+},{"./tokenizers":"D:\\ksana2015\\node_modules\\ksana-analyzer\\tokenizers.js"}],"D:\\ksana2015\\node_modules\\ksana-analyzer\\index.js":[function(require,module,exports){
 /* 
   custom func for building and searching ydb
 
@@ -128,7 +128,7 @@ var getAPI=function(config) {
 }
 
 module.exports={getAPI:getAPI};
-},{"./configs":"C:\\ksana2015\\node_modules\\ksana-analyzer\\configs.js"}],"C:\\ksana2015\\node_modules\\ksana-analyzer\\tokenizers.js":[function(require,module,exports){
+},{"./configs":"D:\\ksana2015\\node_modules\\ksana-analyzer\\configs.js"}],"D:\\ksana2015\\node_modules\\ksana-analyzer\\tokenizers.js":[function(require,module,exports){
 var tibetan =function(s) {
 	//continuous tsheg grouped into same token
 	//shad and space grouped into same token
@@ -282,7 +282,7 @@ var simple=function(s) {
 	return {tokens:tokens,offsets:offsets};
 }
 module.exports={simple:simple,tibetan:tibetan};
-},{}],"C:\\ksana2015\\node_modules\\ksana-database\\bsearch.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-database\\bsearch.js":[function(require,module,exports){
 var indexOfSorted = function (array, obj, near) { 
   var low = 0,
   high = array.length;
@@ -318,12 +318,12 @@ var bsearchNear=function(array,value) {
 }
 
 module.exports=bsearch;//{bsearchNear:bsearchNear,bsearch:bsearch};
-},{}],"C:\\ksana2015\\node_modules\\ksana-database\\index.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-database\\index.js":[function(require,module,exports){
 var KDE=require("./kde");
 //currently only support node.js fs, ksanagap native fs, html5 file system
 //use socket.io to read kdb from remote server in future
 module.exports=KDE;
-},{"./kde":"C:\\ksana2015\\node_modules\\ksana-database\\kde.js"}],"C:\\ksana2015\\node_modules\\ksana-database\\kde.js":[function(require,module,exports){
+},{"./kde":"D:\\ksana2015\\node_modules\\ksana-database\\kde.js"}],"D:\\ksana2015\\node_modules\\ksana-database\\kde.js":[function(require,module,exports){
 /* Ksana Database Engine
 
    2015/1/2 , 
@@ -752,7 +752,7 @@ var enumKdb=function(cb,context){
 }
 
 module.exports={open:openLocal,setPath:setPath, close:closeLocal, enumKdb:enumKdb, bsearch:bsearch};
-},{"./bsearch":"C:\\ksana2015\\node_modules\\ksana-database\\bsearch.js","./listkdb":"C:\\ksana2015\\node_modules\\ksana-database\\listkdb.js","./platform":"C:\\ksana2015\\node_modules\\ksana-database\\platform.js","fs":false,"ksana-jsonrom":"C:\\ksana2015\\node_modules\\ksana-jsonrom\\index.js"}],"C:\\ksana2015\\node_modules\\ksana-database\\listkdb.js":[function(require,module,exports){
+},{"./bsearch":"D:\\ksana2015\\node_modules\\ksana-database\\bsearch.js","./listkdb":"D:\\ksana2015\\node_modules\\ksana-database\\listkdb.js","./platform":"D:\\ksana2015\\node_modules\\ksana-database\\platform.js","fs":false,"ksana-jsonrom":"D:\\ksana2015\\node_modules\\ksana-jsonrom\\index.js"}],"D:\\ksana2015\\node_modules\\ksana-database\\listkdb.js":[function(require,module,exports){
 /* return array of dbid and absolute path*/
 var listkdb_html5=function(cb,context) {
 	ksana.runtime.html5fs.readdir(function(kdbs){
@@ -814,7 +814,7 @@ var listkdb=function(cb,context) {
 	return files;
 }
 module.exports=listkdb;
-},{"./platform":"C:\\ksana2015\\node_modules\\ksana-database\\platform.js","fs":false,"path":false}],"C:\\ksana2015\\node_modules\\ksana-database\\platform.js":[function(require,module,exports){
+},{"./platform":"D:\\ksana2015\\node_modules\\ksana-database\\platform.js","fs":false,"path":false}],"D:\\ksana2015\\node_modules\\ksana-database\\platform.js":[function(require,module,exports){
 var getPlatform=function() {
 	if (typeof ksanagap=="undefined") {
 		platform="node";
@@ -824,7 +824,7 @@ var getPlatform=function() {
 	return platform;
 }
 module.exports={getPlatform:getPlatform};
-},{}],"C:\\ksana2015\\node_modules\\ksana-jsonrom\\html5read.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-jsonrom\\html5read.js":[function(require,module,exports){
 
 /* emulate filesystem on html5 browser */
 /* emulate filesystem on html5 browser */
@@ -916,12 +916,12 @@ var API={
 	,fstat:fstat
 }
 module.exports=API;
-},{}],"C:\\ksana2015\\node_modules\\ksana-jsonrom\\index.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-jsonrom\\index.js":[function(require,module,exports){
 module.exports={
 	open:require("./kdb")
 }
 
-},{"./kdb":"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdb.js"}],"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdb.js":[function(require,module,exports){
+},{"./kdb":"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdb.js"}],"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdb.js":[function(require,module,exports){
 /*
 	KDB version 3.0 GPL
 	yapcheahshen@gmail.com
@@ -1430,7 +1430,7 @@ Create.datatypes=DT;
 if (module) module.exports=Create;
 //return Create;
 
-},{"./kdbfs":"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs.js","./kdbfs_android":"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_android.js","./kdbfs_ios":"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_ios.js"}],"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs.js":[function(require,module,exports){
+},{"./kdbfs":"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs.js","./kdbfs_android":"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_android.js","./kdbfs_ios":"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_ios.js"}],"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs.js":[function(require,module,exports){
 /* node.js and html5 file system abstraction layer*/
 try {
 	var fs=require("fs");
@@ -1747,7 +1747,7 @@ var Open=function(path,opts,cb) {
 	return this;
 }
 module.exports=Open;
-},{"./html5read":"C:\\ksana2015\\node_modules\\ksana-jsonrom\\html5read.js","buffer":false,"fs":false}],"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_android.js":[function(require,module,exports){
+},{"./html5read":"D:\\ksana2015\\node_modules\\ksana-jsonrom\\html5read.js","buffer":false,"fs":false}],"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_android.js":[function(require,module,exports){
 /*
   JAVA can only return Number and String
 	array and buffer return in string format
@@ -1862,7 +1862,7 @@ var Open=function(path,opts,cb) {
 }
 
 module.exports=Open;
-},{}],"C:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_ios.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-jsonrom\\kdbfs_ios.js":[function(require,module,exports){
 /*
   JSContext can return all Javascript types.
 */
@@ -1979,7 +1979,7 @@ var Open=function(path,opts,cb) {
 }
 
 module.exports=Open;
-},{}],"C:\\ksana2015\\node_modules\\ksana-search\\boolsearch.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-search\\boolsearch.js":[function(require,module,exports){
 /*
   TODO
   and not
@@ -2074,7 +2074,7 @@ var boolSearch=function(opts) {
 	return this;
 }
 module.exports={search:boolSearch}
-},{"./plist":"C:\\ksana2015\\node_modules\\ksana-search\\plist.js"}],"C:\\ksana2015\\node_modules\\ksana-search\\bsearch.js":[function(require,module,exports){
+},{"./plist":"D:\\ksana2015\\node_modules\\ksana-search\\plist.js"}],"D:\\ksana2015\\node_modules\\ksana-search\\bsearch.js":[function(require,module,exports){
 var indexOfSorted = function (array, obj, near) { 
   var low = 0,
   high = array.length;
@@ -2109,7 +2109,7 @@ var bsearchNear=function(array,value) {
 }
 
 module.exports=bsearch;//{bsearchNear:bsearchNear,bsearch:bsearch};
-},{}],"C:\\ksana2015\\node_modules\\ksana-search\\excerpt.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-search\\excerpt.js":[function(require,module,exports){
 var plist=require("./plist");
 
 var getPhraseWidths=function (Q,phraseid,vposs) {
@@ -2563,7 +2563,7 @@ module.exports={resultlist:resultlist,
 	//highlightRange:highlightRange,
   //getRange:getRange,
 };
-},{"./plist":"C:\\ksana2015\\node_modules\\ksana-search\\plist.js"}],"C:\\ksana2015\\node_modules\\ksana-search\\index.js":[function(require,module,exports){
+},{"./plist":"D:\\ksana2015\\node_modules\\ksana-search\\plist.js"}],"D:\\ksana2015\\node_modules\\ksana-search\\index.js":[function(require,module,exports){
 /*
   Ksana Search Engine.
 
@@ -2666,7 +2666,7 @@ var api={
 	//,vpos2fileseg:vpos2fileseg
 }
 module.exports=api;
-},{"./bsearch":"C:\\ksana2015\\node_modules\\ksana-search\\bsearch.js","./excerpt":"C:\\ksana2015\\node_modules\\ksana-search\\excerpt.js","./search":"C:\\ksana2015\\node_modules\\ksana-search\\search.js","ksana-analyzer":"C:\\ksana2015\\node_modules\\ksana-analyzer\\index.js","ksana-database":"C:\\ksana2015\\node_modules\\ksana-database\\index.js"}],"C:\\ksana2015\\node_modules\\ksana-search\\plist.js":[function(require,module,exports){
+},{"./bsearch":"D:\\ksana2015\\node_modules\\ksana-search\\bsearch.js","./excerpt":"D:\\ksana2015\\node_modules\\ksana-search\\excerpt.js","./search":"D:\\ksana2015\\node_modules\\ksana-search\\search.js","ksana-analyzer":"D:\\ksana2015\\node_modules\\ksana-analyzer\\index.js","ksana-database":"D:\\ksana2015\\node_modules\\ksana-database\\index.js"}],"D:\\ksana2015\\node_modules\\ksana-search\\plist.js":[function(require,module,exports){
 
 var unpack = function (ar) { // unpack variable length integer list
   var r = [],
@@ -3092,7 +3092,7 @@ plist.groupbyposting2=groupbyposting2;
 plist.groupsum=groupsum;
 plist.combine=combine;
 module.exports=plist;
-},{}],"C:\\ksana2015\\node_modules\\ksana-search\\search.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana-search\\search.js":[function(require,module,exports){
 /*
 var dosearch2=function(engine,opts,cb,context) {
 	opts
@@ -3673,7 +3673,7 @@ var main=function(engine,q,opts,cb){
 
 main.splitPhrase=splitPhrase; //just for debug
 module.exports=main;
-},{"./boolsearch":"C:\\ksana2015\\node_modules\\ksana-search\\boolsearch.js","./excerpt":"C:\\ksana2015\\node_modules\\ksana-search\\excerpt.js","./plist":"C:\\ksana2015\\node_modules\\ksana-search\\plist.js"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\checkbrowser.js":[function(require,module,exports){
+},{"./boolsearch":"D:\\ksana2015\\node_modules\\ksana-search\\boolsearch.js","./excerpt":"D:\\ksana2015\\node_modules\\ksana-search\\excerpt.js","./plist":"D:\\ksana2015\\node_modules\\ksana-search\\plist.js"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\checkbrowser.js":[function(require,module,exports){
 /*
 convert to pure js
 save -g reactify
@@ -3752,7 +3752,7 @@ var checkbrowser = React.createClass({
 });
 
 module.exports=checkbrowser;
-},{"react":"react"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\downloader.js":[function(require,module,exports){
+},{"react":"react"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\downloader.js":[function(require,module,exports){
 
 var userCancel=false;
 var files=[];
@@ -3861,7 +3861,7 @@ var downloadingFile=function() {
 var downloader={startDownload:startDownload, downloadedByte:downloadedByte,
 	downloadingFile:downloadingFile, cancelDownload:cancelDownload,doneDownload:doneDownload};
 module.exports=downloader;
-},{"./mkdirp":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\mkdirp.js","fs":false,"http":false,"path":false}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\fileinstaller.js":[function(require,module,exports){
+},{"./mkdirp":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\mkdirp.js","fs":false,"http":false,"path":false}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\fileinstaller.js":[function(require,module,exports){
 /* todo , optional kdb */
 var React=(window&&window.React)||require("react");
 var HtmlFS=require("./htmlfs");
@@ -4161,7 +4161,7 @@ var Filemanager = React.createClass({
 });
 
 module.exports=Filemanager;
-},{"./checkbrowser":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\checkbrowser.js","./html5fs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js","./htmlfs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\htmlfs.js","react":"react"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js":[function(require,module,exports){
+},{"./checkbrowser":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\checkbrowser.js","./html5fs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js","./htmlfs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\htmlfs.js","react":"react"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js":[function(require,module,exports){
 /* emulate filesystem on html5 browser */
 var get_head=function(url,field,cb){
 	var xhr = new XMLHttpRequest();
@@ -4375,7 +4375,7 @@ var API={
 	,queryQuota:queryQuota
 }
 module.exports=API;
-},{}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\htmlfs.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\htmlfs.js":[function(require,module,exports){
 var html5fs=require("./html5fs");
 var React=(window&&window.React)||require("react");
 var E=React.createElement;
@@ -4489,7 +4489,7 @@ var htmlfs = React.createClass({
 });
 
 module.exports=htmlfs;
-},{"./html5fs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js","react":"react"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\index.js":[function(require,module,exports){
+},{"./html5fs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js","react":"react"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\index.js":[function(require,module,exports){
 var ksana={"platform":"remote"};
 if (typeof window!="undefined") {
 	window.ksana=ksana;
@@ -4555,7 +4555,7 @@ module.exports={boot:boot
 	,downloader:require("./downloader")
 	,installkdb:require("./installkdb")
 };
-},{"./downloader":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\downloader.js","./fileinstaller":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\fileinstaller.js","./html5fs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js","./htmlfs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\htmlfs.js","./installkdb":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\installkdb.js","./kfs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs.js","./kfs_html5":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs_html5.js","./ksanagap":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\ksanagap.js","./livereload":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\livereload.js","./liveupdate":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\liveupdate.js","fs":false,"react":"react"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\installkdb.js":[function(require,module,exports){
+},{"./downloader":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\downloader.js","./fileinstaller":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\fileinstaller.js","./html5fs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js","./htmlfs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\htmlfs.js","./installkdb":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\installkdb.js","./kfs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs.js","./kfs_html5":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs_html5.js","./ksanagap":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\ksanagap.js","./livereload":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\livereload.js","./liveupdate":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\liveupdate.js","fs":false,"react":"react"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\installkdb.js":[function(require,module,exports){
 var React=(window&&window.React)||require("react");
 var Fileinstaller=require("./fileinstaller");
 
@@ -4595,7 +4595,7 @@ var installkdb=function(ksanajs,cb,context) {
 	callback=cb;
 }
 module.exports=installkdb;
-},{"./fileinstaller":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\fileinstaller.js","react":"react"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs.js":[function(require,module,exports){
+},{"./fileinstaller":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\fileinstaller.js","react":"react"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs.js":[function(require,module,exports){
 //Simulate feature in ksanagap
 /* 
   runs on node-webkit only
@@ -4652,7 +4652,7 @@ var listApps=function() {
 var kfs={readDir:readDir,listApps:listApps};
 
 module.exports=kfs;
-},{}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs_html5.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\kfs_html5.js":[function(require,module,exports){
 var readDir=function(){
 	return "[]";
 }
@@ -4660,7 +4660,7 @@ var listApps=function(){
 	return "[]";
 }
 module.exports={readDir:readDir,listApps:listApps};
-},{}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\ksanagap.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\ksanagap.js":[function(require,module,exports){
 var appname="installer";
 var switchApp=function(path) {
 	var fs=require("fs");
@@ -4740,7 +4740,7 @@ if (typeof process!="undefined" && !process.browser) {
 	});
 }
 module.exports=ksanagap;
-},{"./downloader":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\downloader.js","fs":false,"path":false}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\livereload.js":[function(require,module,exports){
+},{"./downloader":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\downloader.js","fs":false,"path":false}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\livereload.js":[function(require,module,exports){
 var started=false;
 var timer=null;
 var bundledate=null;
@@ -4763,7 +4763,7 @@ var livereload=function() {
 }
 
 module.exports=livereload;
-},{"./html5fs":"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js"}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\liveupdate.js":[function(require,module,exports){
+},{"./html5fs":"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\html5fs.js"}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\liveupdate.js":[function(require,module,exports){
 
 var jsonp=function(url,dbid,callback,context) {
   var script=document.getElementById("jsonp");
@@ -4921,7 +4921,7 @@ var liveupdate={ humanFileSize: humanFileSize, humanDate:humanDate,
   status:status
   };
 module.exports=liveupdate;
-},{}],"C:\\ksana2015\\node_modules\\ksana2015-webruntime\\mkdirp.js":[function(require,module,exports){
+},{}],"D:\\ksana2015\\node_modules\\ksana2015-webruntime\\mkdirp.js":[function(require,module,exports){
 function mkdirP (p, mode, f, made) {
      var path = nodeRequire('path');
      var fs = nodeRequire('fs');
@@ -5007,7 +5007,7 @@ mkdirP.sync = function sync (p, mode, made) {
 
 module.exports = mkdirP.mkdirp = mkdirP.mkdirP = mkdirP;
 
-},{}]},{},["C:\\ksana2015\\myapp\\index.js"])
+},{}]},{},["D:\\ksana2015\\myapp\\index.js"])
 
 
 //# sourceMappingURL=bundle.js.map
